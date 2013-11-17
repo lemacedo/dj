@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>DJ</title>
+</head>
+
+<body onkeyup='teclaPress();' >
+
+	<audio id='musica1' controls>
+		<source  src="musica1.mp3" type="audio/mpeg" >
+	</audio>
+	<audio id='musica2' controls>
+		<source  src="musica2.mp3" type="audio/mpeg" >
+	</audio>
+	<audio id='musica3' controls>
+		<source  src="musica3.mp3" type="audio/mpeg" >
+	</audio>
+	<audio id='musica4' controls>
+		<source  src="musica4.mp3" type="audio/mpeg" >
+	</audio>
+	<audio id='musica5' controls>
+		<source  src="musica5.mp3" type="audio/mpeg" >
+	</audio>
+	<audio id='musica6' controls>
+		<source  src="musica6.mp3" type="audio/mpeg" >
+	</audio>
+
+	<input id="teclaA" type="button" value="A" style="font-size:40px">
+	<input id="teclaS" type="button" value="S" style="font-size:40px">
+	<input id="teclaD" type="button" value="D" style="font-size:40px">
+	<input id="teclaJ" type="button" value="J" style="font-size:40px">
+	<input id="teclaK" type="button" value="K" style="font-size:40px">
+	<input id="teclaL" type="button" value="L" style="font-size:40px">
+
+
+
+
+
+<script type="text/javascript">
+var a = 1; 	var s = 1; var d = 1; var j=1; var k=1; var l=1;
+function teclaPress(){
+	var tecla = event.keyCode;
+
+	if(tecla == 65){
+		document.getElementById('musica1').play();
+		document.getElementById('teclaA').style.backgroundColor="#f00";
+		a++
+		if(a == '3'){
+			document.getElementById('musica1').pause();
+			document.getElementById('teclaA').style.backgroundColor="";
+			a=1;
+		}
+	}
+	if(tecla == 83){
+		document.getElementById('musica2').play();
+		document.getElementById('teclaS').style.backgroundColor="#f00";
+		s++
+		if(s == '3'){
+			document.getElementById('musica2').pause();
+			document.getElementById('teclaS').style.backgroundColor="";
+			s=1;
+		}
+	}
+
+	if(tecla == 68){
+		document.getElementById('musica3').play();
+		document.getElementById('teclaD').style.backgroundColor="#f00";
+		d++
+		if(d == '3'){
+			document.getElementById('musica3').pause();
+			document.getElementById('teclaD').style.backgroundColor="";
+			d=1;
+		}
+	}
+
+	if(tecla == 74){
+		document.getElementById('musica4').play();
+		document.getElementById('teclaJ').style.backgroundColor="#f00";
+		j++
+		if(j == '3'){
+			document.getElementById('musica4').pause();
+			document.getElementById('teclaJ').style.backgroundColor="";
+			j=1;
+		}
+	}
+
+	if(tecla == 75){
+		document.getElementById('musica5').play();
+		document.getElementById('teclaK').style.backgroundColor="#f00";
+		k++
+		if(k == '3'){
+			document.getElementById('musica5').pause();
+			document.getElementById('teclaK').style.backgroundColor="";
+			k=1;
+		}
+	}
+
+	if(tecla == 76){
+		document.getElementById('musica6').play();
+		document.getElementById('teclaL').style.backgroundColor="#f00";
+		l++
+		if(l == '3'){
+			document.getElementById('musica6').pause();
+			document.getElementById('teclaL').style.backgroundColor="";
+			l=1;
+		}
+	}
+}
+</script>
+</body>
+</html>
